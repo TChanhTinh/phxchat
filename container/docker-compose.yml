@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  pq:
+    image: postgres
+    container_name: "phoenix_pq"
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_DB=chatroom"
+      - "POSTGRES_PASSWORD=admin"
