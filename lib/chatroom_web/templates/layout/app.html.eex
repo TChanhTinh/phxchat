@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<script>window.userToken = "<%= assigns[:user_token] %>";</script>
+<script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>

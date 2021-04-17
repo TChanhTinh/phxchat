@@ -7,9 +7,11 @@ defmodule ChatroomWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug ChatroomWeb.Plugs.ChatAuth
+    #plug :put_user_token
   end
 
-  pipeline :api do
+   pipeline :api do
     plug :accepts, ["json"]
   end
 
