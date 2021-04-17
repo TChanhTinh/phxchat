@@ -8,8 +8,8 @@ defmodule ChatroomWeb.RoomChannel do
     {:error, %{reason: "unauthorized"}}
   end
 
-  def handle_in("new_msg", %{"body" => body}, socket) do
-    broadcast!(socket, "new_msg", %{body: body})
+  def handle_in("new_msg", %{"username" => username, "body" => body}, socket) do
+    broadcast!(socket, "new_msg", %{username: username, body: body})
     {:noreply, socket}
   end
   def handle_out("user_joined", msg, socket) do

@@ -1,2 +1,5 @@
-<div id="messages" role="log" aria-live="polite"></div>
-<input id="chat-input" type="text"></input>
+<div style="height: 500px; border: 2px solid lightgray; margin-bottom: 10px; padding: 10px;" id="messages" role="log" aria-live="polite"></div>
+<div>
+  <input style="width: 20%" placeholder="Username" id="username-input" type="text"></input>
+  <input style="width: 79%" placeholder="Press enter to send message" id="chat-input" type="text"></input>
+<div>
