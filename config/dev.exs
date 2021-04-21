@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :chatroom, Chatroom.Repo,
   username: "postgres",
-  password: "admin",
+  password: "postgres",
   database: "chatroom",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

@@ -8,7 +8,6 @@ defmodule ChatroomWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug ChatroomWeb.Plugs.ChatAuth
-    #plug :put_user_token
   end
 
    pipeline :api do
@@ -19,6 +18,9 @@ defmodule ChatroomWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/users", UserController, only: [:index, :show, :create, :new, :update, :edit, :delete]
+    resources "/register", UserController, only: [:new, :create]
+    get "/login", UserController, :login
   end
 
   # Other scopes may use custom stacks.
